@@ -80,7 +80,6 @@ header {
     display: flex; /* Use flexbox to center content */
     align-items: center; /* Vertically center content */
     justify-content: center; /* Horizontally center content */
-    white-space: nowrap;
 }
 
 .image-cover.image-cover.image1:hover{
@@ -234,4 +233,19 @@ footer {
     .footer-section {
         margin-bottom: 20px;
     }
+
+        /* Adjust the .pic-grid-1x3 layout for smaller screens */
+    .pic-grid-1x3 {
+        flex-direction: column; /* Change layout to vertical */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .pic-grid-1x3 div {
+        margin-bottom: 10px; /* Space between items */
+    }
+
+    .image-cover{
+        height: 150vh;
+    }
+    
 }
