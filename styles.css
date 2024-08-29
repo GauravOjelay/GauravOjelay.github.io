@@ -1,5 +1,237 @@
-body{
-    font-family: Arial, sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+
+html, body {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: #091626; 
+    color: #ecf0f1; 
+    font-family: 'DM Sans', sans-serif;
+}
+
+p{
+    padding-left: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+h1{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 50px; 
+}
+
+h3{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 40px; 
+}
+
+header {
+    padding: 25px 0; /* Padding around the header */
+}
+
+
+.btn {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid white; /* White border */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding inside the button */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline for <a> tags */
+    display: inline-block; /* Align with other elements */
+    border-radius: 0px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.btn:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text color on hover */
+}
+
+
+.image-cover {
+    flex: 1; /* Allows the divs to grow and take up equal space */
+    text-align: center; /* Centers the text inside the divs */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    background-size: cover; /* Make sure the image covers the container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 75vh; /* Set the height of the container */
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    white-space: nowrap;
+}
+
+.image-cover.image-cover.image1:hover{
+    transform: scale(1);
+}
+
+.image-cover:hover {
+    transform: scale(1.05); /* Slightly increases the size on hover */
+}
+
+.image-cover.image1{
+    background-image: url("Images/Photo1.png");
+}
+.image-cover.image2{
+    background-image: url("Images/Photo2.png");
+}
+.image-cover.image3{
+    background-image: url("Images/Photo3.png");
+}
+.image-cover.image4{
+    background-image: url("Images/Photo4.png");
+}
+
+nav {
+    display: flex; /* Use Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between logo and nav items */
+    max-width: 1200px; /* Optional: limit the max width */
+    margin: 0 auto; /* Center nav horizontally */
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.logo {
+    display: flex; /* Use Flexbox for logo alignment */
+    align-items: center; /* Center the logo image vertically */
+}
+
+.logo-img {
+    height: 100px; /* Adjust the height of the image */
+    width: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: make the image round */
+}
+
+.pic-grid-1x3 {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between items */
+    align-items: center; /* Aligns items vertically within the row */
+    gap: 10px; /* Adds space between the divs, adjust as needed */
+}
+
+.pic-grid-1x3 a:visited {
+    color: #f0f0f0; /* Set the color for visited links */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange list items horizontally */
+    flex-grow: 1; /* Allow the list to take up remaining space */
+    justify-content: center; /* Center navigation items */
+}
+
+ul li {
+    margin: 0 25px; /* Horizontal spacing between items */
+}
+
+ul li a {
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 20px; /* Font size for the links */
+    display: flex; /* Use Flexbox for text alignment */
+    align-items: center; /* Center text vertically */
+}
+
+ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #f0f0f0; /* Slightly lighter color on hover */
+}
+
+footer {
+    background-color: #000000; /* Dark background color */
+    color: white; /* White text color */
+    padding: 20px 0; /* Padding for the footer */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #919191; /* Change color on hover */
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 0px;
+}
+
+.footer-section h2 {
+    margin-top: 0;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
 }
