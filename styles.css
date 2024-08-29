@@ -36,18 +36,20 @@ h2, h3, h4, h5, h6 {
 
 
 h1{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
     margin-top: 250px;
     text-align: center;
     font-size: 100px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 h2{
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
     text-align: center;
     font-size: 60px; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 h3{
@@ -86,6 +88,10 @@ p{
     color: black; /* Black text color on hover */
 }
 
+.large{
+    font-size: 5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
 
 .image-cover {
     flex: 1; 
