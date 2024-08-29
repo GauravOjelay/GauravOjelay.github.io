@@ -293,12 +293,19 @@ footer {
         font-size: 20px; 
     }
 
-    p{
-        padding-left: 10px;
-        padding-right: 10px;
-        text-align: center;
-        font-size: 12px;
+    .image-cover.image2{
+        background-image: url("Images/Photo2.png");
+        height:600px;
     }
+    .image-cover.image3{
+        background-image: url("Images/Photo3.png");
+        height:600px;
+    }
+    .image-cover.image4{
+        background-image: url("Images/Photo4.png");
+        height:600px;
+    }
+
 
 
 }
