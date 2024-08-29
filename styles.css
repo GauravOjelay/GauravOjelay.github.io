@@ -17,6 +17,7 @@ body {
 
 p{
     padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
     font-size: 25px;
 }
@@ -224,3 +225,27 @@ footer {
     font-size: 14px;
 }
 
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+        /* Adjust the .pic-grid-1x3 layout for smaller screens */
+    .pic-grid-1x3 {
+        flex-direction: column; /* Change layout to vertical */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .pic-grid-1x3 div {
+        margin-bottom: 10px; /* Space between items */
+    }
+
+    .image-cover{
+        height: 125vh;
+    }
+}
