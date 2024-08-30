@@ -11,7 +11,7 @@ html, body {
 
 body {
     background-color: #040c16; 
-    color: #ecf0f1; 
+    color: white; 
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -23,6 +23,34 @@ header {
     z-index: 1000; /* Ensure the header is above other content */
     border-bottom: 2px solid white;
 }
+
+nav {
+    display: flex; /* Use Flexbox layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Distribute space between logo and nav items */
+
+    margin: 0 auto; /* Center nav horizontally */
+    padding: 0px 0px; /* Horizontal padding */
+}
+
+ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Arrange list items horizontally */
+    flex-grow: 1; /* Allow the list to take up remaining space */
+    justify-content: center; /* Center navigation items */
+}
+
+
+
+
+
+
+
+
+
+
 
 .mobile-only {
     display: none;
@@ -132,8 +160,8 @@ p{
     background-color: transparent; /* Transparent background */
     border: none;
     color: white; /* White text color */
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     padding-left: 35px;
     padding-right: 35px; 
     text-align: center; /* Center text */
@@ -141,7 +169,7 @@ p{
     display: inline-block; /* Align with other elements */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .header-button:hover {
@@ -169,7 +197,7 @@ p{
 .dropdown-content {
     display: block; /* Keep it block to allow height transition */
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: white;
     min-width: 160px;
     overflow: hidden;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -262,14 +290,7 @@ p{
     height:800px;
 }
 
-nav {
-    display: flex; /* Use Flexbox layout */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Distribute space between logo and nav items */
 
-    margin: 0 auto; /* Center nav horizontally */
-    padding: 0px 0px; /* Horizontal padding */
-}
 
 .logo {
     display: inline-block; /* Use Flexbox for logo alignment */
@@ -293,17 +314,11 @@ nav {
 }
 
 .pic-grid-1x3 a:visited {   
-    color: #f0f0f0; /* Set the color for visited links */
+    color: white; /* Set the color for visited links */
 }
 
-ul {
-    list-style-type: none; /* Remove bullet points */
-    margin: 0;
-    padding: 0;
-    display: flex; /* Arrange list items horizontally */
-    flex-grow: 1; /* Allow the list to take up remaining space */
-    justify-content: right; /* Center navigation items */
-}
+
+
 
 
 ul li a {
@@ -436,17 +451,20 @@ footer {
 
     .image-cover.image2{
         background-image: url("Images/Photo2.png");
-        height:400px;
+        width:600px
     }
     .image-cover.image3{
         background-image: url("Images/Photo3.png");
-        height:400px;
+        width:600px
     }
     .image-cover.image4{
         background-image: url("Images/Photo4.png");
-        height:400px;
+        width:600px
     }
 
+    .logo-img{
+        height: 50px;
+    }
 
 
 }
