@@ -215,6 +215,11 @@ p{
     display: block;
 }
 
+.dropdown-content a:visited {   
+    color: black;
+}
+
+
 .dropdown a:hover {
     background-color: #ddd;
 }
@@ -267,28 +272,50 @@ p{
     position: relative;
 }
 
-.image-cover:not(.image1):hover {
+.image-cover.image1_1{
+    background-image: url("Images/Photo1.1.png");
+    height: 800px;
+}
+
+.image-cover.image1_2{
+    background-image: url("Images/Photo1.2.jpg");
+    height: 800px;
+}
+
+.image-cover.image1_3{
+    background-image: url("Images/Photo1.3.jpg");
+    height: 800px;
+}
+
+.image-cover.image1_4{
+    background-image: url("Images/Photo1.4.jpg");
+    height: 800px;
+}
+
+.image-cover.image1_5{
+    background-image: url("Images/Photo1.5.jpg");
+    height: 800px;
+}
+
+.image-cover.home-page-grid:hover {
     transform: scale(1.05);
 }
 
+.image-cover.home-page-grid.image2_1{
+    background-image: url("Images/Photo2.1.jpg");
+    height:800px;
+}
 
+.image-cover.home-page-grid.image2_2{
+    background-image: url("Images/Photo2.2.png");
+    height:800px;
+}
 
-.image-cover.image1{
-    background-image: url("Images/Photo1.png");
+.image-cover.home-page-grid.image2_3{
+    background-image: url("Images/Photo2.3.png");
     height:800px;
 }
-.image-cover.image2{
-    background-image: url("Images/Photo2.png");
-    height:800px;
-}
-.image-cover.image3{
-    background-image: url("Images/Photo3.png");
-    height:800px;
-}
-.image-cover.image4{
-    background-image: url("Images/Photo4.png");
-    height:800px;
-}
+
 
 
 
@@ -311,13 +338,12 @@ p{
     justify-content: space-between; /* Distributes space evenly between items */
     align-items: center; /* Aligns items vertically within the row */
     gap: 10px; /* Adds space between the divs, adjust as needed */
+    color: white;
 }
 
 .pic-grid-1x3 a:visited {   
     color: white; /* Set the color for visited links */
 }
-
-
 
 
 
@@ -449,17 +475,20 @@ footer {
         font-size: 20px; 
     }
 
-    .image-cover.image2{
-        background-image: url("Images/Photo2.png");
-        width:600px
+    .image-cover.home-page-grid.image2_1{
+        background-image: url("Images/Photo2.1.jpg");
+        width: 600px;
     }
-    .image-cover.image3{
-        background-image: url("Images/Photo3.png");
-        width:600px
+    
+    .image-cover.home-page-grid.image2_2{
+        background-image: url("Images/Photo2.2.png");
+        width: 600px;
     }
-    .image-cover.image4{
-        background-image: url("Images/Photo4.png");
-        width:600px
+    
+    
+    .image-cover.home-page-grid.image2_3{
+        background-image: url("Images/Photo2.3.png");
+        width: 600px;
     }
 
     .logo-img{
