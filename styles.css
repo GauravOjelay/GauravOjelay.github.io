@@ -10,13 +10,12 @@ html, body {
 }
 
 body {
-    background-color: #091626; 
+    background-color: #040c16; 
     color: #ecf0f1; 
     font-family: 'DM Sans', sans-serif;
 }
 
 header {
-    padding: 25px 0; /* Padding around the header */
     background-color: rgba(0, 0, 0, 0.5);  /* Transparent background */
     position: absolute; /* Position header absolutely */
     top: 0;
@@ -25,20 +24,40 @@ header {
     border-bottom: 2px solid white;
 }
 
+.mobile-only {
+    display: none;
+  }
 
+.desktop-only{
+    display: none;
+}
 
+@media (max-width: 1000px) {
+    .mobile-only {
+        display: block;
+    }
+
+    .home-page-intro{
+        padding-top: 130px;
+    }    
+}
+    
+@media (min-width: 1000px) {
+    .desktop-only {
+        display: block;
+    }
+}
 
 h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin-top: 0px;
-    margin-bottom: 100px;
 }
 
 
 h1{
     margin-left: 120px;
     margin-right: 120px;
-    margin-top: 250px;
+    padding-top: 80px;
     text-align: center;
     font-size: 100px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
@@ -47,8 +66,9 @@ h1{
 h2{
     margin-left: 120px;
     margin-right: 120px;
+    margin-bottom: 100px;
     text-align: center;
-    font-size: 60px; 
+    font-size: 55px; 
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
@@ -59,12 +79,33 @@ h3{
     font-size: 40px; 
 }
 
+h4{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
 p{
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
     font-size: 25px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -77,16 +118,105 @@ p{
     text-align: center; /* Center text */
     text-decoration: none; /* Remove underline for <a> tags */
     display: inline-block; /* Align with other elements */
-    border-radius: 0px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .bookNowButton:hover {
     background-color: white; /* White background on hover */
     color: black; /* Black text color on hover */
 }
+
+.header-button {
+    background-color: transparent; /* Transparent background */
+    border: none;
+    color: white; /* White text color */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 35px;
+    padding-right: 35px; 
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline for <a> tags */
+    display: inline-block; /* Align with other elements */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 20px;
+}
+
+.header-button:hover {
+    background-color: white; /* White background on hover */
+    color: black; /* Black text color on hover */
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    font-size: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: block; /* Keep it block to allow height transition */
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    max-height: 400px;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .large{
     font-size: 5rem;
@@ -106,21 +236,18 @@ p{
     background-size: cover; 
     align-items: center;
     justify-content: center;
-    position: relative; /* Add relative positioning */
-    
+    position: relative;
 }
 
-.image-cover.image-cover.image1:hover{
-    transform: scale(1);
+.image-cover:not(.image1):hover {
+    transform: scale(1.05);
 }
 
-.image-cover:hover {
-    transform: scale(1.05); /* Slightly increases the size on hover */
-}
+
 
 .image-cover.image1{
     background-image: url("Images/Photo1.png");
-    height:100vh;
+    height:800px;
 }
 .image-cover.image2{
     background-image: url("Images/Photo2.png");
@@ -139,18 +266,21 @@ nav {
     display: flex; /* Use Flexbox layout */
     align-items: center; /* Center items vertically */
     justify-content: space-between; /* Distribute space between logo and nav items */
-    max-width: 1200px; /* Optional: limit the max width */
+
     margin: 0 auto; /* Center nav horizontally */
-    padding: 0 20px; /* Horizontal padding */
+    padding: 0px 0px; /* Horizontal padding */
 }
 
 .logo {
-    display: flex; /* Use Flexbox for logo alignment */
+    display: inline-block; /* Use Flexbox for logo alignment */
     align-items: center; /* Center the logo image vertically */
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-bottom: 0px;
 }
 
 .logo-img {
-    height: 100px; /* Adjust the height of the image */
+    height: 70px; /* Adjust the height of the image */
     width: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Optional: make the image round */
 }
@@ -162,7 +292,7 @@ nav {
     gap: 10px; /* Adds space between the divs, adjust as needed */
 }
 
-.pic-grid-1x3 a:visited {
+.pic-grid-1x3 a:visited {   
     color: #f0f0f0; /* Set the color for visited links */
 }
 
@@ -172,12 +302,9 @@ ul {
     padding: 0;
     display: flex; /* Arrange list items horizontally */
     flex-grow: 1; /* Allow the list to take up remaining space */
-    justify-content: center; /* Center navigation items */
+    justify-content: right; /* Center navigation items */
 }
 
-ul li {
-    margin: 0 25px; /* Horizontal spacing between items */
-}
 
 ul li a {
     color: #fff; /* Text color */
@@ -187,10 +314,6 @@ ul li a {
     align-items: center; /* Center text vertically */
 }
 
-ul li a:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #f0f0f0; /* Slightly lighter color on hover */
-}
 
 footer {
     background-color: #000000; /* Dark background color */
@@ -205,22 +328,6 @@ footer {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icon {
-    color: white;
-    font-size: 24px;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    color: #919191; /* Change color on hover */
 }
 
 .footer-section {
@@ -251,12 +358,41 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 40px;
     margin-bottom: 0px;
-    font-size: 14px;
 }
 
-@media (max-width: 768px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #919191; /* Change color on hover */
+}
+
+
+
+@media (max-width: 1000px) {
     .footer-content {
         flex-direction: column;
         align-items: center;
@@ -266,7 +402,6 @@ footer {
         margin-bottom: 20px;
     }
 
-        /* Adjust the .pic-grid-1x3 layout for smaller screens */
     .pic-grid-1x3 {
         flex-direction: column; /* Change layout to vertical */
         align-items: center; /* Center items horizontally */
