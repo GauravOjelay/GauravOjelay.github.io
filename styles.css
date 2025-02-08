@@ -108,7 +108,7 @@ p{
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .large{
@@ -156,7 +156,7 @@ p{
 
 .header-button {
     border: none;
-    padding: 25px 35px;
+    padding: 25px 45px;
     font-size: 25px;
 }
 
@@ -273,7 +273,7 @@ p{
 
 
 .image-cover.image1_1{
-    background-image: url("Images/Photo1.1.png");
+    background-image: url("Images/Photo1.1.jpg");
 }
 
 .image-cover.image1_2{
@@ -327,7 +327,7 @@ p{
 }
 
 .image-cover.home-page-grid.image2_2{
-    background-image: url("Images/Photo2.2.png");
+    background-image: url("Images/Photo2.2.jpg");
 }
 
 .image-cover.home-page-grid.image2_3{
