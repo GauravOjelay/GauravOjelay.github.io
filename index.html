@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-
+<script>
+    if (window.location.pathname === "/index.html") {
+    history.replaceState(null, "", "/home");
+}
+</script>
 
 <body>
     <div class="desktop-only">
@@ -134,7 +138,7 @@
             </div>
         </a>
 
-        <a href="https://gauravojelay.github.io/site/" style="text-decoration: none;" target="_blank">
+        <a href="https://gauravojelay.github.io/dhol/" style="text-decoration: none;" target="_blank">
             <div class="image-cover home-page-grid image2_3">
                 <h2 class="large">Dhol</h2>
             </div>

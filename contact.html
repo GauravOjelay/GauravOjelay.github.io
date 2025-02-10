@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-
+<script>
+    if (window.location.pathname === "/contact.html") {
+    history.replaceState(null, "", "/contact");
+}
+</script>
 
 <body>
     <div class="desktop-only">
