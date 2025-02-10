@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
 <script>
-    if (window.location.pathname === "/portfolio.html") {
-    history.replaceState(null, "", "/portfolio");
-}
-</script>
+    document.addEventListener("DOMContentLoaded", function () {
+        if (window.location.pathname.endsWith(".html")) {
+            let newPath = window.location.pathname.replace(".html", "");
+            window.history.replaceState(null, "", newPath);
+        }
+    });
+    </script>
 
 
 <body>
@@ -19,11 +16,11 @@
         <div class="image-cover image1_3">
         <header>
             <nav>
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                     <img src="Images/Icon.jpg" alt="Home" class="logo-img">
                 </a>
                 <ul>
-                    <li><a href="index.html"><button type="button" class="header-button">Home</button></a></li>
+                    <li><a href="/"><button type="button" class="header-button">Home</button></a></li>
                     <li><a href="contact.html"><button type="button" class="header-button">Contact</button></a></li>
                     <li><a href="portfolio.html"><button type="button" class="header-button">Portfolio</button></a></li>
                     <li><a href="https://gauravojelay.github.io/dhol/" target="_blank"><button type="button" class="header-button">Dhol</button></a></li>
@@ -43,13 +40,13 @@
         <div class="image-cover image1_3">
         <header>
             <nav>
-                <a href="index.html" class="logo">
+                <a href="/" class="logo">
                     <img src="Images/Icon.jpg" class="logo-img">
                 </a>
                 <div class="dropdown">
                     <button onclick="myFunction()" class="dropbtn"><i class="fas fa-bars"></i></button>
                     <div id="myDropdown" class="dropdown-content">
-                        <li><a href="index.html"><button type="button" class="header-button">Home</button></a></li>
+                        <li><a href="/"><button type="button" class="header-button">Home</button></a></li>
                         <li><a href="contact.html"><button type="button" class="header-button">Contact</button></a></li>
                         <li><a href="portfolio.html"><button type="button" class="header-button">Portfolio</button></a></li>
                         <li><a href="https://gauravojelay.github.io/dhol/" target="_blank"><button type="button" class="header-button">Dhol</button></a></li>
