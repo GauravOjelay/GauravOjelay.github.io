@@ -154,6 +154,7 @@ p{
     border: none;
     padding: 25px 45px;
     font-size: 25px;
+    margin-bottom: 0;
 }
 
 .header-button:hover {
@@ -516,7 +517,7 @@ footer {
     }
 
     footer p {
-        font-size: 4.5px;
+        font-size: 5px;
         margin-top: 4px;
         margin-bottom: 4px;
     }
@@ -570,8 +571,8 @@ footer {
 
 
     .social-icon {
-        font-size: 8px;
-        margin: 0 2px;
+        font-size: 10px;
+        margin: 0 1.4px;
         display: inline-block; /* Align icons horizontally */
     }
 
