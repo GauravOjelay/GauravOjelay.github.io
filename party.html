@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Party</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 
 <div class="image-cover bday">
     <header>
@@ -25,18 +23,17 @@
                     <a href="https://gauravojelay.github.io/dhol/" target="_blank">Dhol <i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-              
+
             <script>
-                /* When the user clicks on the button, 
-                toggle between hiding and showing the dropdown content */
+                /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
                 function myFunction() {
                     var dropdown = document.getElementById("myDropdown");
                     dropdown.classList.toggle("show");
                     document.querySelector(".dropbtn").classList.toggle("active");
                 }
-                
+
                 // Close the dropdown if the user clicks outside of it
-                window.onclick = function(event) {
+                window.onclick = function (event) {
                     if (!event.target.closest('.dropdown')) {  // Check if the click is outside the dropdown
                         var dropdowns = document.getElementsByClassName("dropdown-content");
                         for (var i = 0; i < dropdowns.length; i++) {
@@ -49,66 +46,40 @@
                         document.querySelector(".dropbtn").classList.remove("active");
                     }
                 }
-
             </script>
         </nav>
     </header>
+
     <h1 style="margin-bottom: 0; font-size: 40px">You're invited to</h1>
     <h2 style="margin-bottom: 20px; font-size: 25px">Paul's 50th & Gaurav's 18th</h2>
     <p style="margin-bottom: 0;"><i class="fas fa-map-marker-alt"></i> The place</p>
     <p style="margin-bottom: 0;"><i class="fas fa-calendar-day"></i> The date</p>
     <p style="margin-bottom: 40px;"><i class="fas fa-clock"></i> The time</p>
-    
-    
 
     <button style="font-size: 20px;" type="button" id="scrollButton">Fill the form</button>
-    </div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Google Form Embed -->
+ <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdJPzG-Vfn7T3vgEVMJtJndMc_agOodYKpgCrKa8bIKQuzUdA/viewform?embedded=true" width="640" height="847" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 <style>
-    /* Default (mobile) styles */
     .google-form {
-      width: 100%; /* 100% width on small screens */
-      height: 1200px !important; /* Adjust the height as needed */
-      display: block; /* Make the iframe a block-level element */
-      margin: 0 auto; /* Center the iframe horizontally */
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        transition: height 0.3s ease; /* Smooth transition for height */
     }
 </style>
 
-
-
 <script>
-    // Get the scroll button
-const scrollButton = document.getElementById("scrollButton");
-
-// Add an event listener to the button to trigger the scroll
-scrollButton.addEventListener("click", function() {
-  window.scrollBy({
-    top: window.innerHeight,  // Scroll down by the height of the window
-    left: 0,
-    behavior: 'smooth'  // Smooth scrolling effect
-  });
-});
-
+    // Scroll down button
+    const scrollButton = document.getElementById("scrollButton");
+    scrollButton.addEventListener("click", function () {
+        window.scrollBy({
+            top: window.innerHeight, // Scroll down by the height of the window
+            left: 0,
+            behavior: 'smooth' // Smooth scrolling effect
+        });
+    });
 </script>
-
-
-<iframe class = "google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdJPzG-Vfn7T3vgEVMJtJndMc_agOodYKpgCrKa8bIKQuzUdA/viewform?embedded=true" width="640" height="847" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
 
 </html>
