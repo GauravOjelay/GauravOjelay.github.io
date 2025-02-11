@@ -507,10 +507,8 @@ footer {
         padding-top: 130px;
     }
     
-    
-
-    p{
-        font-size: 10px;
+    .image-cover.bday{
+        height:600px;
     }
 
     h1{
@@ -518,7 +516,7 @@ footer {
         margin-right: 10px;
         margin-top: 125px;
         text-align: center;
-        font-size: 40px;
+        font-size: 50px;
     }
     
     h2{
