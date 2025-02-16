@@ -7,79 +7,118 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<div class="image-cover bday">
-    <header>
-        <nav>
-            <a href="/" class="logo">
-                <img src="Images/Icon.jpg" class="logo-img">
-            </a>
-            <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn"><i class="fas fa-bars"></i></button>
-                <div id="myDropdown" class="dropdown-content">
-                    <a href="/">Home</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="portfolio.html">Portfolio</a>
-                    <a href="privacyPolicy.html">Privacy</a>
-                    <a href="https://gauravojelay.github.io/dhol/" target="_blank">Dhol <i class="fas fa-external-link-alt"></i></a>
+<body>
+    <div class="image-cover bday">
+        <header>
+            <nav>
+                <a href="/" class="logo">
+                    <img src="Images/Icon.jpg" class="logo-img">
+                </a>
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="dropbtn"><i class="fas fa-bars"></i></button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <a href="/">Home</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="privacyPolicy.html">Privacy</a>
+                        <a href="https://gauravojelay.github.io/dhol/" target="_blank">Dhol <i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
-            </div>
 
-            <script>
-                /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
-                function myFunction() {
-                    var dropdown = document.getElementById("myDropdown");
-                    dropdown.classList.toggle("show");
-                    document.querySelector(".dropbtn").classList.toggle("active");
-                }
-
-                // Close the dropdown if the user clicks outside of it
-                window.onclick = function (event) {
-                    if (!event.target.closest('.dropdown')) {  // Check if the click is outside the dropdown
-                        var dropdowns = document.getElementsByClassName("dropdown-content");
-                        for (var i = 0; i < dropdowns.length; i++) {
-                            var openDropdown = dropdowns[i];
-                            if (openDropdown.classList.contains('show')) {
-                                openDropdown.classList.remove('show');
-                            }
-                        }
-                        // Also remove the active state from the button
-                        document.querySelector(".dropbtn").classList.remove("active");
+                <script>
+                    function myFunction() {
+                        var dropdown = document.getElementById("myDropdown");
+                        dropdown.classList.toggle("show");
+                        document.querySelector(".dropbtn").classList.toggle("active");
                     }
-                }
-            </script>
-        </nav>
-    </header>
 
-    <h1 style="margin-bottom: 0; font-size: 40px">You're invited to</h1>
-    <h2 style="margin-bottom: 20px; font-size: 25px">Paul's 50th & Gaurav's 18th</h2>
-    <p style="margin-bottom: 0;"><i class="fas fa-map-marker-alt"></i> The place</p>
-    <p style="margin-bottom: 0;"><i class="fas fa-calendar-day"></i> The date</p>
-    <p style="margin-bottom: 40px;"><i class="fas fa-clock"></i> The time</p>
+                    window.onclick = function (event) {
+                        if (!event.target.closest('.dropdown')) {
+                            var dropdowns = document.getElementsByClassName("dropdown-content");
+                            for (var i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains('show')) {
+                                    openDropdown.classList.remove('show');
+                                }
+                            }
+                            document.querySelector(".dropbtn").classList.remove("active");
+                        }
+                    }
+                </script>
+            </nav>
+        </header>
 
-    <button style="font-size: 20px;" type="button" id="scrollButton">Fill the form</button>
-</div>
+        <h1 style="margin-bottom: 0; font-size: 40px">You're invited to</h1>
+        <h2 style="margin-bottom: 20px; font-size: 25px">Paul's 50th & Gaurav's 18th</h2>
+        <p style="margin-bottom: 0;"><i class="fas fa-map-marker-alt"></i> The place</p>
+        <p style="margin-bottom: 0;"><i class="fas fa-calendar-day"></i> The date</p>
+        <p style="margin-bottom: 40px;"><i class="fas fa-clock"></i> The time</p>
 
-<!-- Google Form Embed -->
- <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdJPzG-Vfn7T3vgEVMJtJndMc_agOodYKpgCrKa8bIKQuzUdA/viewform?embedded=true" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-<style>
-    .google-form {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        transition: height 0.3s ease; /* Smooth transition for height */
-    }
-</style>
+        <button style="font-size: 20px;" type="button" id="scrollButton">Fill the form</button>
+    </div>
 
-<script>
-    // Scroll down button
-    const scrollButton = document.getElementById("scrollButton");
-    scrollButton.addEventListener("click", function () {
-        window.scrollBy({
-            top: window.innerHeight, // Scroll down by the height of the window
-            left: 0,
-            behavior: 'smooth' // Smooth scrolling effect
+    <!-- RSVP Form -->
+    <form action="https://formsubmit.co/your@email.com" method="POST" class="rsvp-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="people">How many people are going?</label>
+        <input type="number" id="people" name="people" required min="1">
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <style>
+        .rsvp-form {
+            width: 50%;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rsvp-form label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: black; /* Make question text black */
+        }
+
+        .rsvp-form input {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .rsvp-form button {
+            background: black; /* Make submit button black */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .rsvp-form button:hover {
+            background: #333; /* Slightly lighter black on hover */
+        }
+    </style>
+
+    <script>
+        const scrollButton = document.getElementById("scrollButton");
+        scrollButton.addEventListener("click", function () {
+            window.scrollBy({
+                top: window.innerHeight,
+                left: 0,
+                behavior: 'smooth'
+            });
         });
-    });
-</script>
+    </script>
 
+</body>
 </html>
