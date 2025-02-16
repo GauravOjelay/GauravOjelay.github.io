@@ -58,7 +58,7 @@
     </div>
 
     <!-- RSVP Form -->
-    <form action="https://formsubmit.co/your@email.com" method="POST" class="rsvp-form">
+    <form id="rsvpForm" class="rsvp-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
@@ -66,6 +66,7 @@
         <input type="number" id="people" name="people" required min="1">
 
         <button type="submit">Submit</button>
+        <p id="responseMessage" style="display: none;"></p>
     </form>
 
     <style>
@@ -110,6 +111,26 @@
     </style>
 
     <script>
+        document.getElementById("rsvpForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+
+            const formData = {
+                name: document.getElementById("name").value,
+                people: document.getElementById("people").value
+            };
+
+            const response = await fetch("https://script.google.com/macros/s/AKfycbyMIc0enxPy7FIuGGiWpNT_Pi74VHqhPTO6lY76besyNao2z53uMGVyD5pD50dqv8Sx/exec", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.text();
+            document.getElementById("responseMessage").innerText = result;
+            document.getElementById("responseMessage").style.display = "block";
+            document.getElementById("rsvpForm").reset();
+        });
+
         const scrollButton = document.getElementById("scrollButton");
         scrollButton.addEventListener("click", function () {
             window.scrollBy({
